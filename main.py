@@ -13,30 +13,27 @@ import scrapy
 import lxml.html
 import Sneakerstudio
 import Worldbox
+import runcolors
 from datetime import date
+
+main_chat =789430384
+test_chat = 704777145
 
 
 headers = {'accept':'*/*',
             'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'}
 token = "1098441995:AAGqy3iBI9ODvcIaGW3isg3BrSJe60wBU1I"
-TELEGRAM_CHAT_ID = '704777145'
-bot = telebot.TeleBot(token)
-Sneakerstudio_url ='https://sneakerstudio.pl/pol_m_SALE-665.html'
-Worldbox_url= 'https://worldbox.pl/products/cupon-ostatnie-sztuki/flag,8/item,24'
-
-
-
-token = "1098441995:AAGqy3iBI9ODvcIaGW3isg3BrSJe60wBU1I"
-TELEGRAM_CHAT_ID = '704777145'
 bot = telebot.TeleBot(token)
 
 
 
-Sneakerstudio.sneakerstudio_pars(Sneakerstudio_url, headers)
+#Sneakerstudio.sneakerstudio_parssale(Sneakerstudio.Sale_url, headers)
+#Sneakerstudio.sneakerstudio_parsnew(Sneakerstudio.New_url,headers)
 
+#Worldbox.worldbox_parsesale(Worldbox.Sale_url, headers)
+#Worldbox.worldvox_parsnew(Worldbox.New_url, headers)
 
-#Worldbox.worldbox_parse(Worldbox_url, headers)
-
+runcolors.runcolors_parsnew(runcolors.New_url, headers)
 
 
 bot.polling(none_stop=True, interval=0)
