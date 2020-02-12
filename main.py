@@ -14,10 +14,11 @@ import lxml.html
 import Sneakerstudio
 import Worldbox
 import runcolors
+import zalando
 from datetime import date
 
 main_chat =789430384
-test_chat = 704777145
+test_chat = 414407353
 
 
 headers = {'accept':'*/*',
@@ -26,14 +27,14 @@ token = "1098441995:AAGqy3iBI9ODvcIaGW3isg3BrSJe60wBU1I"
 bot = telebot.TeleBot(token)
 
 
-
+#   zalando.zalando_pars(zalando.sneakers_url, headers)
 #Sneakerstudio.sneakerstudio_parssale(Sneakerstudio.Sale_url, headers)
 #Sneakerstudio.sneakerstudio_parsnew(Sneakerstudio.New_url,headers)
 
 #Worldbox.worldbox_parsesale(Worldbox.Sale_url, headers)
-#Worldbox.worldvox_parsnew(Worldbox.New_url, headers)
+Worldbox.worldvox_parsnew(Worldbox.New_url, headers)
 
-runcolors.runcolors_parsnew(runcolors.New_url, headers)
+#runcolors.runcolors_parsnew(runcolors.New_url, headers)
 
 
 bot.polling(none_stop=True, interval=0)

@@ -14,7 +14,7 @@ import lxml.html
 from datetime import date
 
 main_chat =789430384
-test_chat = 704777145
+test_chat = 414407353
 headers = {'accept':'*/*',
             'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'}
 token = "1098441995:AAGqy3iBI9ODvcIaGW3isg3BrSJe60wBU1I"
@@ -46,15 +46,15 @@ def runcolors_parsnew(New_url,headers):
                 soup1 = bs(request1.content, 'html.parser')
                 ul = soup1.find_all('div', attrs={'class': 'product__data__options'})
                 print(ul)
-                for sizes in ul:
-                    size = sizes.get()
-                    print(size)
+                #for sizes in ul:
+                #   size = sizes.get()
+                #   print(size)
             #print(hreff)
            # print(title)
             #print(img)
             #print(price)
             all = title + '\n' + price + '\n' + img
-            #bot.send_message(test_chat, all)
+            bot.send_message(test_chat, all)
             print('qwe')
 
 

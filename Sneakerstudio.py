@@ -14,7 +14,7 @@ import lxml.html
 from datetime import date
 
 main_chat =789430384
-test_chat = 704777145
+test_chat = 414407353
 headers = {'accept':'*/*',
             'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'}
 token = "1098441995:AAGqy3iBI9ODvcIaGW3isg3BrSJe60wBU1I"
@@ -36,14 +36,13 @@ def sneakerstudio_parssale(Sale_url,headers):
 
         for div in divs:
             list = div.find_all('img')
+            for first_pic in list:
+                img = first_pic.get('data-lazy')
+            pict = ('https://sneakerstudio.pl' + img)
             price = div.find('span', attrs={'class': 'price'}).text
             title = div.find('a', attrs={'class': 'product-name'}).text
             #print(title)
             #print(price)
-            for first_pic in list:
-                img = first_pic.get('data-lazy')
-
-            pict =('https://sneakerstudio.pl' + img)
 
             text = ('SneakerStudio' + '\n' + 'Sale🔥🔥🔥')
             AllAnswer = text + '\n' + title + '\n' + price + '\n' + pict;
